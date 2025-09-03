@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MagTex — UIST 2025</title>
+  <meta name="description" content="MagTex is a machine-knit magnetoactive textile that unifies sensing and vibrotactile haptics for bidirectional HMI. UIST 2025." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--fg:#1c1d20;--muted:#5b606b;--link:#2b6be0;--bg:#ffffff;--band:#f6f7f9;--rule:#e6e8ec}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--rule);z-index:5}
+    .nav{display:flex;align-items:center;gap:24px;height:60px}
+    .nav h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.2px}
+    .nav a{font-size:14px;color:var(--muted)}
+    .hero{padding:48px 0 28px}
+    .title{font-size:36px;line-height:1.15;margin:0 0 10px;font-weight:800}
+    .subtitle{margin:10px 0 0;color:var(--muted)}
+    .authors{margin:10px 0 6px}
+    .authors a{color:var(--fg)}
+    .affil{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns: 1fr 330px;gap:36px}
+    .card{border:1px solid var(--rule);border-radius:12px;padding:16px}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:999px;padding:9px 14px;font-size:14px;font-weight:600}
+    .btn + .btn{margin-left:8px}
+    .pill{display:inline-block;background:#eef2ff;color:#3843d0;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600}
+    .band{background:var(--band);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+    section{padding:28px 0}
+    .fig{border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+    .fig img,.fig video{display:block;width:100%;height:auto}
+    .cap{font-size:14px;color:var(--muted);margin-top:8px;text-align:center}
+    .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+    .results-vertical{display:flex;flex-direction:column;gap:28px;margin-top:16px}
+    pre{background:#0f1115;color:#dbe2ff;padding:16px;border-radius:10px;overflow:auto;font-size:13px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    footer{padding:36px 0;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <h1>MagTex</h1>
+      <a href="#abstract">Abstract</a>
+      <a href="#teaser">Teaser</a>
+      <a href="#results">Results</a>
+      <a href="#videos">Video</a>
+      <a href="#bibtex">BibTeX</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="title">MagTex: Machine-Knitted Magnetoactive Textiles for Bidirectional Human–Machine Interface</div>
+      <div class="authors">
+        <a href="#">Sen Zhang</a>, <a href="#">Yuxuan Miao</a>, <a href="#">Jazlin Taylor</a>, <a href="#">Yiyue Luo</a>
+      </div>
+      <div class="affil">Electrical &amp; Computer Engineering, University of Washington — UIST ’25, Busan, Sept 28 – Oct 1, 2025</div>
+    </section>
+
+    <section class="grid">
+      <div>
+        <div id="abstract" class="card">
+          <span class="kicker">Abstract</span>
+          <p style="margin-top:8px">
+            Bidirectional HMIs provide both sensing and haptic feedback. We present <b>MagTex</b>, a bidirectional HMI platform realized via digitally machine-knitted magnetoactive textiles. MagTex embeds soft magnetoactive fibers into machine-knitted electromagnets, delivering localized vibrotactile feedback (galvanomagnetic effect) and motion sensing (electromagnetic induction). We describe the digital fabrication workflow, material characterization, circuit implementation, and system integration. A user study confirms perceptibility and safe thermal properties. We demonstrate a wireless smart sleeve for game control, a tactile Braille glove, and a closed-loop knee brace for real-time running feedback.
+          </p>
+        </div>
+
+        <section id="teaser" class="band" style="margin:22px 0 0">
+          <div style="padding:18px 18px 6px">
+            <span class="kicker">Teaser</span>
+            <div class="fig" style="margin-top:10px">
+              <img src="static/images/teaser.jpg" alt="MagTex overview montage">
+            </div>
+            <div class="cap">Overview of MagTex units integrated into garments; sensing + haptics in a single textile module.</div>
+          </div>
+        </section>
+
+        <section id="results">
+          <span class="kicker">Results</span>
+          <div class="results-vertical">
+            <div>
+              <div class="fig"><img src="static/images/app1.jpg" alt="Sleeve controller"></div>
+              <div class="cap">Wireless smart sleeve for gesture-based control.</div>
+            </div>
+            <div>
+              <div class="fig"><img src="static/images/app2.jpg" alt="Braille glove"></div>
+              <div class="cap">Braille glove with six palm-mounted MagTex units.</div>
+            </div>
+            <div>
+              <div class="fig"><img src="static/images/app3.jpg" alt="Knee brace"></div>
+              <div class="cap">Closed-loop knee-brace sensing with hand-glove feedback.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="videos" class="band">
+          <div style="padding:18px">
+            <span class="kicker">Video</span>
+            <div class="fig" style="margin-top:10px">
+              <iframe width="100%" height="520" src="https://www.youtube.com/embed/RXgtbO9i6Mc" title="MagTex Presentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+
+        <section id="bibtex">
+          <span class="kicker">Citation</span>
+          <pre><code>@inproceedings{Zhang2025MagTex,
+  author    = {Sen Zhang and Yuxuan Miao and Jazlin Taylor and Yiyue Luo},
+  title     = {MagTex: Machine-Knitted Magnetoactive Textiles for Bidirectional Human--Machine Interface},
+  booktitle = {Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology (UIST '25)},
+  year      = {2025},
+  address   = {Busan, Republic of Korea},
+  month     = {September 28--October 1},
+  publisher = {ACM},
+  doi       = {10.1145/3746059.3747648}
+}</code></pre>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Paper &amp; Links</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 8px">
+            <a class="btn" href="static/pdfs/magtex.pdf" target="_blank">Paper (PDF)</a>
+          </div>
+          <div class="pill">UIST ’25</div>
+          <div style="margin-top:10px;color:var(--muted);font-size:14px">
+            Sept 28 – Oct 1, 2025 · Busan, Republic of Korea
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="band">
+    <div class="wrap" style="padding:18px 20px">
+      <div>© 2025 The Authors. Built from a lightweight academic template; content licensed CC BY-SA 4.0.</div>
+    </div>
+  </footer>
+</body>
+</html>
